@@ -162,3 +162,4 @@ def main():
 # ---- Script startet hier (bei Aufruf, nicht bei import / ohne (if __name__) start bei inmport der <name>.py dei main)
 if __name__ == "__main__":
     main()
+    
