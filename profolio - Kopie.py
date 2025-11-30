@@ -250,4 +250,5 @@ if __name__ == "__main__":
         print("❌ Falsche Argumente!")
         print("INIT:   python portfolio.py <week> <title> <project>")
         print("UPDATE: python portfolio.py")
+
         
