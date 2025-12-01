@@ -235,31 +235,70 @@ def update_all():
         log(f"[ERROR] WEEKS_DIR nicht gefunden: {WEEKS_DIR}")
         return
 
-    for folder in os.listdir(WEEKS_DIR):
-        if folder.startswith("week_"):
-            folder_path = os.path.join(WEEKS_DIR, folder)
-            readme = os.path.join(folder_path, "README.md")
+    week_folders = [f for f in os.listdir(WEEKS_DIR) if f.startswith("week_")]
+    if not week_folders:
+        print("ℹ️ Keine week_XX Ordner gefunden. Nichts zu aktualisieren.")
+        log("[SKIP] Keine Wochenordner vorhanden.")
+        return
 
-            if not os.path.exists(readme):
-                continue
+    for folder in week_folders:
+        folder_path = os.path.join(WEEKS_DIR, folder)
+        readme = os.path.join(folder_path, "README.md")
 
-            md = update_screenshots(folder_path)
-            if md is None:
-                continue
+        if not os.path.exists(readme):
+            log(f"[SKIP] Kein README in {folder_path}")
+            continue
 
-            # README ersetzen
+        # --- Prüfe screenshots-Ordner korrekt (Variable hier definieren) ---
+        screenshots = os.path.join(folder_path, "screenshots")
+        if not os.path.exists(screenshots):
+            log(f"[SKIP] Kein screenshot-Ordner in {folder_path}")
+            # Schreibe trotzdem eine konsistente Platzhalter-Markdown in README
+            md = "- Noch keine Screenshots"
             with open(readme, "r", encoding="utf-8") as f:
                 content = f.read()
-
             if "## Screenshotliste" in content:
                 pre, _ = content.split("## Screenshotliste", 1)
                 new_content = pre + "## Screenshotliste\n\n" + md
-
                 with open(readme, "w", encoding="utf-8") as f:
                     f.write(new_content)
-
+                log(f"[UPDATE] README (keine screenshots) aktualisiert in {folder}")
                 updated += 1
-                log(f"[UPDATE] README aktualisiert in {folder}")
+            continue
+
+        if not os.listdir(screenshots):
+            log(f"[SKIP] screenshot-Ordner leer in {folder_path}")
+            md = "- Noch keine Screenshots"
+            with open(readme, "r", encoding="utf-8") as f:
+                content = f.read()
+            if "## Screenshotliste" in content:
+                pre, _ = content.split("## Screenshotliste", 1)
+                new_content = pre + "## Screenshotliste\n\n" + md
+                with open(readme, "w", encoding="utf-8") as f:
+                    f.write(new_content)
+                log(f"[UPDATE] README (leerer screenshots-Ordner) aktualisiert in {folder}")
+                updated += 1
+            continue
+
+        # Wenn screenshots existieren und nicht leer: generiere die eigentliche Markdown-Liste
+        md = update_screenshots(folder_path)
+        if md is None:
+            log(f"[SKIP] update_screenshots returned None for {folder_path}")
+            continue
+
+        # README ersetzen
+        with open(readme, "r", encoding="utf-8") as f:
+            content = f.read()
+
+        if "## Screenshotliste" in content:
+            pre, _ = content.split("## Screenshotliste", 1)
+            new_content = pre + "## Screenshotliste\n\n" + md
+
+            with open(readme, "w", encoding="utf-8") as f:
+                f.write(new_content)
+
+            updated += 1
+            log(f"[UPDATE] README aktualisiert in {folder}")
 
     print(f"✔ UPDATE abgeschlossen. {updated} Ordner aktualisiert.")
     log(f"[DONE] Update abgeschlossen: {updated}")
