@@ -46,7 +46,7 @@ except ImportError:
     print("⚠️  PIL nicht installiert. Thumbnails werden übersprungen.")
     print("   Installation: pip install Pillow")
 
-THUMB_WIDTH = 180  
+THUMB_WIDTH = 197  
 PER_PAGE = 25      
 LOGFILE = "update_log.txt"
 
@@ -176,9 +176,9 @@ def update_screenshots(folder_path):
         if PIL_AVAILABLE and thumb_path and not os.path.exists(thumb_path):
             create_thumbnail(input_path, thumb_path)
 
-        # Markdown Eintrag - FIXED: Verwende <a> statt Markdown-Link-Syntax
+        # Markdown Eintrag - FIXED: Verwende <a> statt Markdown-Link-Syntax + Border + Radius
         if PIL_AVAILABLE and thumb_path and os.path.exists(thumb_path):
-            md_line = f"- <a href=\"screenshots/{fname}\"><img src=\"thumbnails/{fname}\" width=\"{THUMB_WIDTH}\"></a>"
+            md_line = f"<a href=\"screenshots/{fname}\"><img src=\"thumbnails/{fname}\" width=\"{THUMB_WIDTH}\" style=\"border: 3px solid #333; border-radius: 8px; display: block;\"></a>"
         else:
             md_line = f"- [{fname}](screenshots/{fname})"
 
@@ -401,4 +401,3 @@ if __name__ == "__main__":
     
     title_norm = normalize_title(title)
     init_week(week, title_norm, project)
-    
