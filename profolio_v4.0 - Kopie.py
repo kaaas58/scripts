@@ -30,7 +30,6 @@
 #        • Titel aus allen Wörtern kombiniert
 #        • Projekt-Platzhalter: Projekt
 #
-#
 # =====================================================================
 
 import os
