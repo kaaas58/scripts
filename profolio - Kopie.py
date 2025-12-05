@@ -29,8 +29,6 @@
 #        • week_05_smart-pointers/
 #        • Titel aus allen Wörtern kombiniert
 #        • Projekt-Platzhalter: Projekt
-#
-#
 # =====================================================================
 
 import os
