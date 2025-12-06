@@ -1,7 +1,4 @@
-# ====================================
-# ========================
-# =====
-# ====
+# =====================================================================
 # Portfolio Automator – PRO Version
 #
 # VERWENDUNG:
@@ -32,6 +29,7 @@
 #        • week_05_smart-pointers/
 #        • Titel aus allen Wörtern kombiniert
 #        • Projekt-Platzhalter: Projekt
+#
 # =====================================================================
 
 import os
