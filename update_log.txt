@@ -1,0 +1,15 @@
+2025-12-07 19:22:01.334556 | [CREATE] steps/ Ordner erstellt: C:\Users\lutr5\DEV\DEV_cpp\cpp_mastery\steps
+2025-12-07 19:22:01.341134 | [INIT] Step erstellt: step_01_hello-world
+2025-12-07 19:22:12.803083 | [INIT] Step erstellt: step_02_bye-bye-world
+2025-12-07 19:46:30.341394 | [ERROR] STEPS_DIR nicht gefunden: C:\Users\lutr5\DEV\DEV_cpp\steps
+2025-12-07 19:46:42.171472 | [CREATE] .gitignore erstellt im Root
+2025-12-07 19:46:42.172080 | [CREATE] steps/ Ordner erstellt: C:\Users\lutr5\DEV\DEV_cpp\steps
+2025-12-07 19:46:42.178658 | [INIT] Step erstellt: step_01_start
+2025-12-07 19:50:22.768348 | [CREATE] steps/ Ordner erstellt: C:\Users\lutr5\DEV\DEV_cpp\steps
+2025-12-07 19:50:22.775495 | [INIT] Step erstellt: step_01_bye-bye-world
+2025-12-07 19:56:59.678662 | [CREATE] .gitignore erstellt im Root
+2025-12-07 19:56:59.679376 | [CREATE] steps/ Ordner erstellt: C:\Users\lutr5\DEV\DEV_cpp\cpp_mastery\steps
+2025-12-07 19:56:59.686440 | [INIT] Step erstellt: step_01_hihihih
+2025-12-07 19:59:59.551185 | [INIT] Step erstellt: step_02_bye-bye-world
+2025-12-07 20:06:18.937104 | [CREATE] steps/ Ordner erstellt: C:\Users\lutr5\DEV\DEV_cpp\cpp_mastery\steps
+2025-12-07 20:06:18.943617 | [INIT] Step erstellt: step_01_sart
