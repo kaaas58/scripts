@@ -1,6 +1,6 @@
 # 🛠️ DEV Scripts – Sammlung von Entwicklungs-Tools
 
-Dieses Repository enthält verschiedene Python-Skripte, die typische Aufgaben im täglichen Entwickler-Workflow automatisieren.  
+Dieses Repository enthält verschiedene Skripte, es soll typische Aufgaben im täglichen Entwickler-Workflow automatisieren.  
 Die Skripte sind modular, unabhängig voneinander und können einzeln ausgeführt werden.
 
 Der Fokus liegt auf:
@@ -14,7 +14,7 @@ Der Fokus liegt auf:
 
 ## ▶️ Verwendung
 
-Script downloaden, anpassen und ausführen. Ggf Abhängigkeiten installieren.
+Script downloaden, anpassen und ausführen, ggf Abhängigkeiten installieren.
 
 z.B.
 
