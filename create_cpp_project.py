@@ -225,9 +225,7 @@ public:
 # ---- README.md ----
 readme = f"""# {project_name}
 
-Dieses Projekt wurde automatisch durch **projectgen.py** erstellt.
-
-## 📦 Struktur
+## 📦 Projektstruktur
 
 {project_name}/
 ├── CMakeLists.txt

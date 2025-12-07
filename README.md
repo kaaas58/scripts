@@ -1,2 +1,0 @@
-# scripts
-to automize sth
