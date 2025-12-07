@@ -22,3 +22,11 @@ z.B.
 - (für C++-Skripte) MinGW-w64 oder MSVC  
 - (für Build-Skripte) Ninja + CMake  
 - Optional: VS Code mit CMake Tools
+
+## ⚠️ Rechtlicher Hinweis (Disclaimer)
+
+Alle Skripte in diesem Repository werden **ohne jegliche Garantie** bereitgestellt.  
+Nutzung auf eigene Verantwortung.  
+Der Autor übernimmt **keine Haftung** für Schäden oder Datenverlust, die aus der Nutzung entstehen.
+
+Für freie Verwendung bestimmt (MIT License).

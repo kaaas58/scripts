@@ -141,7 +141,7 @@ print(f"📦 Projekt wird in : {GREEN}{project_root}{RESET} erzeugt")
 # ------------------------------------------------------------
 # MinGW Pfad
 # ------------------------------------------------------------
-mingw_path = "C:/mingw64/bin"
+mingw_path = r"C:\Program Files\mingw64\bin"
 
 # ------------------------------------------------------------
 # Ordnerstruktur
