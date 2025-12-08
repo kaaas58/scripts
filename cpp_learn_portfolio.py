@@ -98,6 +98,7 @@ README_TEMPLATE = """
 
 ## Struktur
 
+```plaintext
 folder/
 │
 ├── steps/
@@ -114,6 +115,7 @@ folder/
 │
 ├── .gitignore
 └── .git
+```
 
 ## 📸 Screenshots
 

@@ -13,3 +13,8 @@
 2025-12-07 19:59:59.551185 | [INIT] Step erstellt: step_02_bye-bye-world
 2025-12-07 20:06:18.937104 | [CREATE] steps/ Ordner erstellt: C:\Users\lutr5\DEV\DEV_cpp\cpp_mastery\steps
 2025-12-07 20:06:18.943617 | [INIT] Step erstellt: step_01_sart
+2025-12-07 20:18:39.204707 | [ERROR] STEPS_DIR nicht gefunden: C:\Users\lutr5\DEV\DEV_cpp\cpp_mastery\steps
+2025-12-07 20:18:56.437065 | [CREATE] steps/ Ordner erstellt: C:\Users\lutr5\DEV\DEV_cpp\cpp_mastery\steps
+2025-12-07 20:18:56.442903 | [INIT] Step erstellt: step_01_start
+2025-12-07 20:20:58.590400 | [CREATE] steps/ Ordner erstellt: C:\Users\lutr5\DEV\DEV_cpp\cpp_mastery\steps
+2025-12-07 20:20:58.596065 | [INIT] Step erstellt: step_01_start-path
