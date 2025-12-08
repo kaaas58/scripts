@@ -99,22 +99,29 @@ README_TEMPLATE = """
 ## Struktur
 
 ```plaintext
-folder/
+step_XX_name/
+├── README.md
+├── CMakeLists.txt
+├── CMakePresets.json
 │
-├── steps/
-│   └── step_01_smart-pointers/
-│       ├── src/
-│       │   └── main.cpp
-│       ├── include/
-│       ├── build/
-│       │   └── .gitkeep
-│       ├── screenshots/
-│       ├── CMakeLists.txt
-│       ├── CMakePresets.json
-│       └── README.md
+├── src/
+│   └── main.cpp
 │
-├── .gitignore
-└── .git
+├── include/
+│   └── (optional header)
+│
+├── screenshots/
+│   └── *.png
+│
+├── thumbnails/
+│   └── *.png
+│
+├── build/               # CMake-Output – wird NICHT eingecheckt
+│   └── debug/
+│       └── <exe>
+│
+└── .vscode/             # lokal generiert, wird NICHT eingecheckt
+    └── launch.json
 ```
 
 ## 📸 Screenshots
@@ -180,6 +187,34 @@ int main() {{
     
     return 0;
 }}
+"""
+
+LAUNCH_JSON_TEMPLATE = """
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Step",
+            "type": "cppdbg",
+            "request": "launch",
+
+            // CMake Tools erzeugt immer die EXE im Preset build/
+            "program": "${workspaceFolder}/build/${command:cmake.launchTargetPath}",
+
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+
+            // MinGW + GDB
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:/Program Files/mingw64/bin/gdb.exe",
+
+            // Vor dem Debuggen automatisch bauen
+            "preLaunchTask": "cmake.build",
+
+            "console": "integratedTerminal"
+        }
+    ]
+}
 """
 
 GITIGNORE_TEMPLATE = """# =====================================================
@@ -484,6 +519,14 @@ def init_step(step, title):
     presets_file = os.path.join(folder, "CMakePresets.json")
     with open(presets_file, "w", encoding="utf-8") as f:
         json.dump(get_cmake_presets(step, title_norm), f, indent=4)
+
+    # .vscode/launch.json erzeugen
+    vscode_dir = os.path.join(folder, ".vscode")
+    os.makedirs(vscode_dir, exist_ok=True)
+
+    launch_file = os.path.join(vscode_dir, "launch.json")
+    with open(launch_file, "w", encoding="utf-8") as f:
+        f.write(LAUNCH_JSON_TEMPLATE)
 
     # src/main.cpp
     main_cpp = os.path.join(folder, "src", "main.cpp")
