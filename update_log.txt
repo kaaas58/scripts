@@ -24,3 +24,8 @@
 2025-12-08 23:32:57.409932 | [INIT] Step erstellt: step_02_second-mekond
 2025-12-08 23:49:11.647870 | [INIT] Step erstellt: step_03_sec-ond-mek-ond
 2025-12-08 23:49:54.000915 | [INIT] Step erstellt: step_01_start
+2025-12-09 18:18:13.584058 | [INIT] Step erstellt: step_02_upuupup-pupupu-uppu
+2025-12-09 18:19:07.161379 | [INIT] Step erstellt: step_03_h
+2025-12-09 18:19:17.640009 | [INIT] Step erstellt: step_04_help
+2025-12-09 18:24:17.548235 | [CREATE] steps/ Ordner erstellt: C:\Users\lutr5\DEV\DEV_cpp\cpp_mastery\steps
+2025-12-09 18:24:17.556522 | [INIT] Step erstellt: step_01_kok

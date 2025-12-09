@@ -1,10 +1,11 @@
 # =====================================================================
 # C++ Learning Automator – Hybrid Version
 #
+# Ebene wo steps liegen ist hardcodet auf ..\cpp_mastery\steps\
 # VERWENDUNG:
 #
 # 1) UPDATE-MODUS (Screenshots & Thumbnails aktualisieren)
-#      py cpp_learn.py
+#      py cpp_learn_portfolio.py
 #
 #    → Durchsucht alle Step-Ordner und:
 #        • generiert fehlende Thumbnails (197px)
