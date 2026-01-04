@@ -63,10 +63,10 @@ MINGW_PATH = r"C:\Program Files\mingw64\bin"
 # =====================================================================
 
 README_TEMPLATE = """
-# Step {step} - {title}
+# step_{step} {title}
 
 ![C++](https://img.shields.io/badge/C++-17%2F20-00599C?logo=cplusplus)
-![Progress](https://img.shields.io/badge/Step-{step}-lightgreen)
+![Progress](https://img.shields.io/badge/step-{step}-lightgreen)
 
 ## 📚 Was ich gelernt habe
 
